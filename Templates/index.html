@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<title>Netnaija</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/index.css')}}">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/all.css')}}">
+<link rel="shortcut icon" href="{{ url_for('static', filename='images/netnaija_icon.png')}}" type="image/png">
+{% endblock %}
+
+{% block header%}
+<div id="content">
+     <img src="{{ url_for('static', filename='images/Netnaija_bg.jpg')}}" alt="" class="bg_image">
+     <div class="gradient"> </div>
+     <div id="head">
+          <a href="/" id="logo">
+               <img src="{{url_for('static', filename='images/NetNaija-logo.png')}}" alt="">
+          </a>
+
+          <div id="right_head">
+               <div class="user">
+                    <i class="fa-solid fa-circle-user"></i>
+                    {{username}}
+                    <a href="/registration">logout<i class="fa-solid fa-right-from-bracket"></i>
+                    </a></div>
+          </div>
+     </div>
+</div>
+
+{% block image %}
+<div id="content1">
+     <p id="head1">TOP MOVIES</p>
+     <div id="movies">
+          <a href="{{ url_for('movie', movie_name='Falling-Like-Snowflakes', link='images/Falling-Like-Snowflakes.webp')}}">
+               <img
+                    src="{{ url_for('static', filename='images/Falling-Like-Snowflakes.webp')}}" alt="Falling-Like-Snowflakes"></a>
+          <a href="{{ url_for('movie', movie_name='Mummy' , link='images/mummy_1.jpeg')}}"><img
+                    src="{{ url_for('static', filename='images/Mummy.png')}}" alt=Mummy"></a>
+          <a
+               href="{{ url_for('movie', movie_name='The-Exorcism' , link='images/the_exorcism_1.jpeg')}}"><img
+                    src="{{ url_for('static', filename='images/The-Exorcism.webp')}}" alt="The-Exorcism"></a>
+          <a href="{{ url_for('movie', movie_name='If' , link='images/if_1.jpeg')}}"><img
+                    src="{{ url_for('static', filename='images/If.png')}}" alt="If"></a>
+
+     </div>
+</div>
+{% endblock image %}
+
+{% endblock header%}

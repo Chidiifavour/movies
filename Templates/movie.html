@@ -1,0 +1,31 @@
+{% extends 'index.html' %}
+
+{% block head %}
+<title>Netnaija</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/movie.css')}}">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/all.css')}}">
+<link rel="shortcut icon" href="{{ url_for('static', filename='images/NetNaija-logo.png')}}" type="image/png">
+{% endblock %}
+
+{% block image %}
+<div id="content1">
+    <p id="head1">{{movie_name}}</p>
+    <div id="content2">
+        <div id="movies">
+            <img src="{{ url_for('static', filename=link)}}">
+        </div>
+        <p id="description">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque praesentium ut excepturi quod
+            nisi optio eaque
+            cum aspernatur sint at maxime, nostrum necessitatibus dolores, eius amet. Cupiditate aliquam hic enim?
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam consequuntur, ipsa animi quas ratione
+            cumque? Praesentium voluptatem facere deserunt, suscipit ea architecto enim commodi est delectus quis nihil!
+            Nobis, porro.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio harum nulla illo voluptatem minus quia quam
+            alias facilis sequi! Facilis, quis debitis? Rerum, beatae! Consequatur quod nihil culpa optio dicta!
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut laborum labore fugit est tempore saepe ea, facilis quas consequuntur voluptate corporis corrupti nulla aliquam ducimus necessitatibus veniam dolor maxime fuga.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam iure hic nesciunt quaerat ipsam saepe modi, veniam atque, beatae dolores asperiores? Saepe odit autem iusto temporibus praesentium, fugiat nihil suscipit.
+        </p>
+    </div>
+</div>
+{% endblock image %}

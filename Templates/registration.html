@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+
+{% block head %}
+     <title>Register</title>
+     <link rel="stylesheet" href="{{ url_for('static', filename='css/registration.css')}}">
+     <link rel="shortcut icon" href="{{ url_for('static', filename='images/netnaija_icon.png')}}" type="image/png">
+{% endblock %}
+
+{% block content%}
+<div id="content">
+    <img src="{{ url_for('static', filename='images/Netnaija_bg.jpg')}}" class="bg_image">
+    <div id="head">
+        <div class="logo">
+            <img src="{{url_for('static', filename='images/NetNaija-logo.png')}}" alt="">
+         </div>
+   </div>
+
+   <div class="reg">
+    <div class="register">
+        <form action="/registration" method="post">
+            <h1>Sign Up</h1>
+            <label for="fname">First Name</label>
+            <input type="text" id="fname" name="first_name" placeholder="First name" required>
+        
+            <label for="lname">Last Name</label>
+            <input type="text" id="lname" name="last_name" placeholder="Last name" required>
+    
+            <label for="Uname">User Name</label>
+            <input type="text" id="Uname" name="username" placeholder="User name" required>
+            
+            <label for="pwd">Password</label>
+            <input type="password" id="password" name="password" minlength="8" placeholder="password" required>
+
+            <button type="submit">Register</button>
+          </form>
+       </div>
+   </div>
+</div>
+{% endblock content%}
